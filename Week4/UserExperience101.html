@@ -3,8 +3,33 @@
 <html>
 <head>  
     <title>Effects of Cafeine on College Grade Point Averages</title>
+    <!--I gave the text on the form a white color because based on a quick google search, caffeine is white
+    I went with the steelblue color for the headers because it is one of the few colors that doesn't clash with the background color-->
+    <style type="text/css">
+    body {
+        background-color: darkgray;
+        color:white;
+        padding:20px;
+        }
+    table {
+        text-align:center;
+        }
+    h1{
+        color:steelblue;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    h2{
+        color:steelblue;
+        font-family: cursive;
+    }
+    h3{
+        color:steelblue;
+        font-family:fantasy;
+    }
+    </style>
 </head>
 
+<body>
 <h1>
         Effects of Cafeine on College Grade Point Averages
     </h1>
@@ -18,7 +43,9 @@
 
     <h3>Description</h3>
 
-    <!--links for a description of the possible unknown terms are inserted where the first instance of that word is on the webpage-->
+    <!--links for a description of the possible unknown terms are inserted where the first instance of that word is on the webpage
+    added a margin for the image so that the text isn't right up against the image-->
+    <img src="caffeine.jpg" width="150" height="150" align="left" style="margin:5px"/>
     <p>College students consume surprising quantities of <a href="https://en.wikipedia.org/wiki/Caffeine">caffeine</a> on average. This study seeks to determine if a correlation exists between the amount 
         of caffeine an individual consumes daily and that individual's <a href="https://en.wikipedia.org/wiki/Grading_in_education">grade point average in school.</a></p>
     <p>The initial experiment included a group, which received daily caffeine equal to the national average (Group A), a group which received twice the
@@ -46,8 +73,9 @@
     <h3>Data</h3>
 
     <!--put a border on the table cause the default looked nasty
-    Also made the the row and column headings as table heading to emphasize what each row and column shows-->
-    <table border="3">
+    Also made the the row and column headings as table heading to emphasize what each row and column shows
+    Changed the table so that when the score goes up on a group the background is green and if the score goes down the background is red-->
+    <table border="6">
         <tr>
             <td></td>
             <th>Starting Average:</th>
@@ -57,20 +85,37 @@
         <tr>
             <th>Group A</th>
             <td>3.25</td>
-            <td>3.30</td>
-            <td>3.31</td>
+            <td style="background-color:green">3.30</td>
+            <td style="background-color:green">3.31</td>
         </tr>
         <tr>
             <th>Group B</th>
             <td>3.30</td>
-            <td>3.62</td>
-            <td>3.14</td>
+            <td style="background-color:green">3.62</td>
+            <td style="background-color:red">3.14</td>
         </tr>
         <tr>
             <th>Group C</th>
             <td>3.28</td>
-            <td>3.27</td>
-            <td>3.30</td>
+            <td style="background-color:red">3.27</td>
+            <td style="background-color:green">3.30</td>
         </tr>
     </table>
+
+    <hr>
+
+    <h3>Follow Up</h3>
+
+    <!---->
+    <form action="mailto:jenniferlastname@scientists.org" method="POST" name="emailform" enctype="text/plain">
+        <p>If you are interested in investing or have any follow up questions, please email me. You can use the button below to immediately start a draft to my email.</p>
+        
+        <label style="margin-left: 45px">Name:</label>
+        <input type="text" name="Name" Size="30"/><br>
+        <label>&nbsp; Follow Ups:</label>
+        <input type="text" name="Followups" size="75"/><br><br>
+        <label>Submit followups:</label>
+        <input type="submit"  value="submit">
+    </form>
+    </body>
 </html>
