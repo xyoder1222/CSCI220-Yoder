@@ -1,0 +1,47 @@
+.menubar{
+    background-color: black;   
+    border-style:ridge;
+    width:440px;
+    margin:0 auto;
+}
+.home{
+    color: rgb(236,23,37);
+}
+.about{
+    color: rgb(29,212,89);
+}
+.events{
+    color: rgb(226,226,2);
+}
+.contact{
+    color: rgb(126,222,222);
+}
+table{
+    text-align: center;
+}
+td{
+    font-size:16pt;
+    padding:25px;
+}
+th{
+    font-size:18pt;
+}
+.menua{
+    color:inherit
+}
+.home :hover{
+    color: white;
+    background-color: rgb(236,23,37);
+}
+.about :hover{
+    color: white;
+    background-color: rgb(29,212,89);
+}
+.events :hover{
+    color: white;
+    background-color: rgb(226,226,2);
+}
+.contact :hover{
+    color: white;
+    background-color: rgb(126,222,222);
+}
