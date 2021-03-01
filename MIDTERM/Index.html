@@ -3,20 +3,131 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="Styling4Midterm.css"/>
-    <Title>Super Smash Bros. Ultimate Fan page</Title>
+    <Title>Super Smash Bros. divtimate Fan page</Title>
+    <meta charset="utf-8" />
 </head>
 
 <body>
     <div class="menubar">
         <table>
             <tr>
-                <td class="home"><a href="Index.html" class="menua">Home</a></td>
+                <td class="home" ><a href="Index.html" class="menua">Home</a></td>
                 <td class="about"><a href="About.html" class="menua">About</a></td>
                 <td class="events"><a href="Events.html" class="menua">Events</a></td>
                 <td class="contact"><a href="Contact.html" class="menua">Contact</a></td>
             </tr>
         </table>
     </div>
+
+    <br>
+    <br>
+
+    <div class="slideshow-container">
+        <div class="slideshow-inner">
+            <div class="mySlides fade">
+                <img class="mySlides" src="WHYYYYYYYYYYYYYy/01Mario.png">
+                <img class="mySlides" src="WHYYYYYYYYYYYYYy/02DK.png">
+                <img class="mySlides" src="WHYYYYYYYYYYYYYy/03Link.png">
+            </div>
+            <div class="mySlides fade">
+                <img class="mySlides" src="WHYYYYYYYYYYYYYy/04Samus.png">
+                <img class="mySlides" src="WHYYYYYYYYYYYYYy/04SamusDark.png">
+                <img class="mySlides" src="WHYYYYYYYYYYYYYy/05Yoshi.png">
+            </div>
+            <div class="mySlides fade">
+                <img class="mySlides" src="WHYYYYYYYYYYYYYy/06Kirby.png">
+                <img class="mySlides" src="WHYYYYYYYYYYYYYy/07Fox.png">
+                <img class="mySlides" src="WHYYYYYYYYYYYYYy/08Pikachu.png">
+            </div>
+            <div class="mySlides fade">
+                <img class="mySlides" src="WHYYYYYYYYYYYYYy/09Luigi.png">
+                <img class="mySlides" src="WHYYYYYYYYYYYYYy/10Ness.png">
+                <img class="mySlides" src="WHYYYYYYYYYYYYYy/11CaptainFalcon.png">
+            </div>
+            <div class="mySlides fade">
+                <img class="mySlides" src="WHYYYYYYYYYYYYYy/12Jigglypuff.png">
+                <img class="mySlides" src="WHYYYYYYYYYYYYYy/13Peach.png">
+                <img class="mySlides" src="WHYYYYYYYYYYYYYy/13PDaisy.png">
+            <div class="mySlides fade">
+                <img class="mySlides" src="WHYYYYYYYYYYYYYy/14Bowser.png">
+                <img class="mySlides" src="WHYYYYYYYYYYYYYy/15IceClimbers.png">
+                <img class="mySlides" src="WHYYYYYYYYYYYYYy/16Sheik.png">
+            </div>
+            <div class="mySlides fade">
+                <img class="mySlides" src="WHYYYYYYYYYYYYYy/17Zelda.png">
+            </div>
+        </div>
+    </div>
+
+    <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+  <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+</div>
+<br/>
+
+
+<div style='text-align: center;'>
+  <span class="dot" onclick='currentSlide(1)'></span>
+  <span class="dot" onclick='currentSlide(2)'></span>
+  <span class="dot" onclick='currentSlide(3)'></span>
+  <span class="dot" onclick='currentSlide(4)'></span>
+</div>
+
+    <script>
+        var slideIndex = 1;
+    
+    var myTimer;
+    
+    var slideshowContainer;
+    
+    window.addEventListener("load",function() {
+        showSlides(slideIndex);
+        myTimer = setInterval(function(){plusSlides(1)}, 4000);
+      
+        //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+        slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+    })
+    
+    // NEXT AND PREVIOUS CONTROL
+    function plusSlides(n){
+      clearInterval(myTimer);
+      if (n < 0){
+        showSlides(slideIndex -= 1);
+      } else {
+       showSlides(slideIndex += 1); 
+      }
+      
+      //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+      
+      if (n === -1){
+        myTimer = setInterval(function(){plusSlides(n + 2)}, 4000);
+      } else {
+        myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+      }
+    }
+    
+    //Controls the current slide and resets interval if needed
+    function currentSlide(n){
+      clearInterval(myTimer);
+      myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n){
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+        </script>
 </body>
 
 </html>
