@@ -1,8 +1,14 @@
 .menubar{
-    background-color: black;   
+    opacity:1;   
     border-style:ridge;
     width:450px;
     margin:0 auto;
+    display: flex;
+    justify-content: center;
+}
+h1{
+    font-size: 18pt;
+    color:white;
 }
 .home{
     color: rgb(236,23,37);
@@ -24,15 +30,14 @@ td{
     font-size:16pt;
     padding:25px;
 }
-th{
-    font-size:18pt;
-}
 .menua{
     color:inherit
 }
 div{
     display: flex;
     justify-content: center;
+    background-color: black;
+    opacity: .33;
 }
 .home :hover{
     color: white;
@@ -58,4 +63,9 @@ a:link{
 }
 a:visited{
     text-decoration:none;
+}
+.disclaimer
+{
+    text-align: center;
+    font-size: 8pt;
 }
