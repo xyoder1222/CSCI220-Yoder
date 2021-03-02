@@ -9,6 +9,7 @@
 h1{
     font-size: 18pt;
     color:white;
+    text-align: center;
 }
 .home{
     color: rgb(236,23,37);
@@ -25,19 +26,28 @@ h1{
 table{
     text-align: center;
     border-width: 3px;
+    margin-left: auto;
+    margin-right: auto;
+}
+th{
+    font-size: 20pt;
+    font-weight: bold;
+    padding: 25px;
 }
 td{
     font-size:16pt;
-    padding:25px;
+    padding: 25px;
+}
+p{
+    font-size: 14pt;
 }
 .menua{
     color:inherit
 }
 div{
-    display: flex;
-    justify-content: center;
+    
     background-color: black;
-    opacity: .33;
+    opacity: .95;
 }
 .home :hover{
     color: white;
@@ -58,18 +68,78 @@ div{
     background-color: rgb(126,222,222);
     background-size:auto;
 }
+.Sakurai{
+    width:200px;
+    height:300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 a:link{
     text-decoration: none;
 }
 a:visited{
     text-decoration:none;
 }
-.disclaimer
+.Logos
 {
-    text-align: center;
-    font-size: 8pt;
+    width:100px;
+    height:100px;
+}
+.Buy{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Links
+{
+    width:525px;
+    margin: auto;
+}
+.About{
+    width: 1056px;
+    margin:auto;
+    padding:15px;
 }
 body{
-    background-image: url(/MIDTERM/BackgroundImages/Background1.jpg);
+    background-image: url("BackgroundImages/Background1.jpg");
     background-size: cover;
+    color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: chbg 75s infinite alternate;
 }
+@keyframes chbg {
+    0% {
+      background:url("BackgroundImages/Background1.jpg");
+    background-size:cover
+    }
+    14% {
+      background:url("BackgroundImages/Background3.jpg");
+    background-size:cover
+    }
+    28% {
+      background:url("BackgroundImages/Background4.jpg");
+    background-size:cover
+    }
+    42% {
+      background:url("BackgroundImages/Background5.jpg");
+    background-size:cover
+    }
+    57% {
+      background:url("BackgroundImages/Background6.jpg");
+    background-size:cover
+    }
+    71% {
+      background:url("BackgroundImages/Background7.jpg");
+    background-size:cover
+    }
+    85% {
+        background:url("BackgroundImages/Background8.jpg");
+      background-size:cover
+      }
+      100% {
+        background:url("BackgroundImages/Background2.jpg");
+      background-size:cover
+      }
+  }
