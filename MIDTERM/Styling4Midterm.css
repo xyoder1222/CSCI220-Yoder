@@ -38,6 +38,9 @@ td{
     font-size:16pt;
     padding: 25px;
 }
+textarea{
+    resize: none;
+}
 p{
     font-size: 14pt;
 }
