@@ -118,34 +118,42 @@ body{
 @keyframes chbg {
     0% {
       background:url("BackgroundImages/Background1.jpg");
-    background-size:cover
+    background-size:cover;
+    background-repeat: no-repeat;
     }
     14% {
       background:url("BackgroundImages/Background3.jpg");
-    background-size:cover
+    background-size:cover;
+    background-repeat: no-repeat;
     }
     28% {
       background:url("BackgroundImages/Background4.jpg");
-    background-size:cover
+    background-size:cover;
+    background-repeat: no-repeat;
     }
     42% {
       background:url("BackgroundImages/Background5.jpg");
-    background-size:cover
+    background-size:cover;
+    background-repeat: no-repeat;
     }
     57% {
       background:url("BackgroundImages/Background6.jpg");
-    background-size:cover
+    background-size:cover;
+    background-repeat: no-repeat;
     }
     71% {
       background:url("BackgroundImages/Background7.jpg");
-    background-size:cover
+    background-size:cover;
+    background-repeat: no-repeat;
     }
     85% {
         background:url("BackgroundImages/Background8.jpg");
-      background-size:cover
+      background-size:cover;
+      background-repeat: no-repeat;
       }
       100% {
         background:url("BackgroundImages/Background2.jpg");
-      background-size:cover
+      background-size:cover;
+      background-repeat: no-repeat;
       }
   }
