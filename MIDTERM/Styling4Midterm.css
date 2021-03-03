@@ -47,7 +47,7 @@ p{
 div{
     
     background-color: black;
-    opacity: .95;
+    opacity: .90;
 }
 .home :hover{
     color: white;
@@ -56,17 +56,14 @@ div{
 .about :hover{
     color: white;
     background-color: rgb(29,212,89);
-    background-size: cover;
 }
 .events :hover{
     color: white;
     background-color: rgb(226,226,2);
-    background-size: cover;
 }
 .contact :hover{
     color: white;
     background-color: rgb(126,222,222);
-    background-size:auto;
 }
 .Sakurai{
     width:200px;
@@ -90,11 +87,13 @@ a:visited{
     display: block;
   margin-left: auto;
   margin-right: auto;
+  padding:35px;
 }
 .Links
 {
     width:525px;
     margin: auto;
+    padding:15px;
 }
 .About{
     width: 1056px;
@@ -111,49 +110,59 @@ body{
     background-image: url("BackgroundImages/Background1.jpg");
     color: white;
     animation: chbg 75s infinite;
-    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family: "Roboto",-apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI",Arial,sans-serif;
 }
 @keyframes chbg {
     0% {
       background:url("BackgroundImages/Background1.jpg");
     background-size:cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     }
     14% {
       background:url("BackgroundImages/Background3.jpg");
     background-size:cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     }
     28% {
       background:url("BackgroundImages/Background4.jpg");
     background-size:cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     }
     42% {
       background:url("BackgroundImages/Background5.jpg");
     background-size:cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     }
     57% {
       background:url("BackgroundImages/Background6.jpg");
     background-size:cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     }
     71% {
       background:url("BackgroundImages/Background7.jpg");
     background-size:cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     }
     85% {
         background:url("BackgroundImages/Background8.jpg");
       background-size:cover;
+      background-attachment: fixed;
       background-repeat: no-repeat;
       }
       100% {
         background:url("BackgroundImages/Background2.jpg");
       background-size:cover;
+      background-attachment: fixed;
       background-repeat: no-repeat;
       }
   }
