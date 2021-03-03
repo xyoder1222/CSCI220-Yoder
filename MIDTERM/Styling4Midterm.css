@@ -101,13 +101,19 @@ a:visited{
     margin:auto;
     padding:15px;
 }
+.Contact{
+    width:1200px;
+    padding: 15px;
+    margin:auto;
+    text-align: center;
+}
 body{
     background-image: url("BackgroundImages/Background1.jpg");
-    background-size: cover;
     color: white;
+    animation: chbg 75s infinite;
     background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
-    animation: chbg 75s infinite alternate;
 }
 @keyframes chbg {
     0% {
