@@ -1,13 +1,13 @@
 .menubar{
     opacity:1;   
     border-style:ridge;
-    width:450px;
+    width:462px;
     margin:0 auto;
     display: flex;
     justify-content: center;
 }
 h1{
-    font-size: 18pt;
+    font-size: 22pt;
     color:white;
     text-align: center;
 }
@@ -52,18 +52,22 @@ div{
 .home :hover{
     color: white;
     background-color: rgb(236,23,37);
+    box-shadow: 0px 0px 0px 25px  rgb(236,23,37);
 }
 .about :hover{
     color: white;
     background-color: rgb(29,212,89);
+    box-shadow: 0px 0px 0px 25px rgb(29,212,89);
 }
 .events :hover{
     color: white;
     background-color: rgb(226,226,2);
+    box-shadow: 0px 0px 0px 25px  rgb(226,226,2);
 }
 .contact :hover{
     color: white;
     background-color: rgb(126,222,222);
+    box-shadow: 0px 0px 0px 25px  rgb(126,222,222);
 }
 .Sakurai{
     width:200px;
@@ -71,6 +75,12 @@ div{
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+input[type=submit] {
+    font-size: 16pt;
+}
+form{
+    font-size: 16pt;
 }
 a:link{
     text-decoration: none;
@@ -105,6 +115,18 @@ a:visited{
     padding: 15px;
     margin:auto;
     text-align: center;
+}
+.Events{
+    width: 1056px;
+    margin:auto;
+    padding:15px;
+}
+ul{
+    font-size: 20pt;
+}
+li{
+    font-size: 16pt;
+    margin:20px 0;;
 }
 body{
     background-image: url("BackgroundImages/Background1.jpg");
