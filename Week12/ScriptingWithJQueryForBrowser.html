@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+   
+<head>
+    <script src="../jquery-3.6.0.js"></script>
+</head>
+<body>
+    <form>
+        <p>Name: &nbsp;<input type="text" id="Name"></p><br>
+        <p>Title: &nbsp;<input type="text" id="Title"></p><br>
+        <p>Hire Date: &nbsp;<input type="date"  id="Date"></p><br>
+        <input type="button" value="Add Record" id="yes">
+    </form>
+
+    <br><br>
+
+    <script>
+        $("#yes").click(function(){
+            var name = $("#Name").val();
+            var title = $("#Title").val();
+            var date = $("#Date").val();
+            if (name === "")
+            {
+                alert("Please Enter A Name");
+                $("#Name").focus();
+            }
+            else if (title == "")
+            {
+                alert("Please Enter A Title");
+                $("#Title").focus();
+            }
+            else if(date === "")
+            {
+                alert("Please Enter A Date");
+                $("Date").focus();
+            }
+            else
+            {
+                $("#MyTable").append("<tr><td>" + name + "</td><td>" + title + "</td><td>" + date + "</td></tr>");
+                $("#Name").val("");
+                $("#Title").val("");
+                $("#Date").val("");
+            }
+            
+        });
+    </script>
+
+    <table id="MyTable">
+        <thead>
+            <tr>
+                <th id="Names">Name</th>
+                <th id="Titles">Title</th>
+                <th id="Dates">Hire Date</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+</body>
+</html>
