@@ -2,12 +2,33 @@
 <html>
    
 <head>
+    <style type="text/css">
+    form{
+        background-color:darkgray;
+        color: cornsilk;
+        padding: 10px;
+    }
+    table{
+        background-color:darkgray;
+        color:cornsilk;
+        text-align: center;
+    }
+    th:hover{
+        background-color: rgb(255,244,114);
+        color: black;
+    }
+    body{
+        background-color: grey;
+        font-size: large;
+    }
+    </style>
+    
     <script src="../jquery-3.6.0.js"></script>
 </head>
 <body>
     <form>
         <p>Name: &nbsp;<input type="text" id="Name"></p><br>
-        <p>Title: &nbsp;<input type="text" id="Title"></p><br>
+        <p>Title: &nbsp; &nbsp;<input type="text" id="Title"></p><br>
         <p>Hire Date: &nbsp;<input type="date"  id="Date"></p><br>
         <input type="button" value="Add Record" id="yes">
     </form>
@@ -42,10 +63,53 @@
                 $("#Date").val("");
             }
             
+        $('#Names').click(function(){
+            var table = $(this).parents('table').eq(0)
+            var rows = table.find('tr:gt(0)').toArray().sort(comparer($(this).index()))
+            this.asc = !this.asc
+            if (!this.asc){rows = rows.reverse()}
+            for (var i = 0; i < rows.length; i++){table.append(rows[i])}
+        })
+        function comparer(index) {
+        return function(a, b) {
+        var valA = getCellValue(a, index), valB = getCellValue(b, index)
+        return $.isNumeric(valA) && $.isNumeric(valB) ? valA - valB : valA.toString().localeCompare(valB)
+        }
+        }
+
+        function getCellValue(row, index){ return $(row).children('td').eq(index).text() }
+
+        $('#Titles').click(function(){
+            var table = $(this).parents('table').eq(0)
+            var rows = table.find('tr:gt(0)').toArray().sort(comparer($(this).index()))
+            this.asc = !this.asc
+            if (!this.asc){rows = rows.reverse()}
+            for (var i = 0; i < rows.length; i++){table.append(rows[i])}
+        })
+        function comparer(index) {
+        return function(a, b) {
+        var valA = getCellValue(a, index), valB = getCellValue(b, index)
+        return $.isNumeric(valA) && $.isNumeric(valB) ? valA - valB : valA.toString().localeCompare(valB)
+        }
+        }
+
+        $('#Dates').click(function(){
+            var table = $(this).parents('table').eq(0)
+            var rows = table.find('tr:gt(0)').toArray().sort(comparer($(this).index()))
+            this.asc = !this.asc
+            if (!this.asc){rows = rows.reverse()}
+            for (var i = 0; i < rows.length; i++){table.append(rows[i])}
+        })
+        function comparer(index) {
+        return function(a, b) {
+        var valA = getCellValue(a, index), valB = getCellValue(b, index)
+        return $.isNumeric(valA) && $.isNumeric(valB) ? valA - valB : valA.toString().localeCompare(valB)
+        }
+        }
         });
     </script>
 
-    <table id="MyTable">
+    <table id="MyTable" border="3">
         <thead>
             <tr>
                 <th id="Names">Name</th>
