@@ -2,6 +2,11 @@
 <html>
    
 <head>
+    <!--
+        honestly, I just wanted to keep the web page simpe. 
+        also, when I was working on the styling, I had bananas on the mind and that why there is a banana yellow hover color
+        all other colors were used to try and compiment the banana yellow as best as possible
+    -->
     <style type="text/css">
     form{
         background-color:darkgray;
@@ -40,6 +45,8 @@
             var name = $("#Name").val();
             var title = $("#Title").val();
             var date = $("#Date").val();
+            //check to see if there is something in each input field and gives a specific alert based on which field(s) are missing
+            //set focus to the input field that needs a value to make it easier for the user
             if (name === "")
             {
                 alert("Please Enter A Name");
@@ -58,6 +65,7 @@
             else
             {
                 $("#MyTable").append("<tr><td>" + name + "</td><td>" + title + "</td><td>" + date + "</td></tr>");
+                //clears out all input fields so that the user does not have to worry about deleting the previous content themselves
                 $("#Name").val("");
                 $("#Title").val("");
                 $("#Date").val("");
