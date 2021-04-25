@@ -9,9 +9,8 @@ var item1 = {
     description: "Dynamic Microphone with Cardioid Pickup Pattern, 40Hz-15kHz Frequency Response, Low Impedance, Includes Stand Adapter, and Zippered Carrying Case",
     available: 9
 };
-
 var item2 = {
-    image: "https://media.sweetwater.com/api/i/f-webp__q-82__ha-340bda9f117d6b93__hmac-325c0ac72caebc0a389e39f6e2b623340a0d858e/images/items/750/SG61VENH-large.jpg.auto.webp",
+    image: "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-300__bg-ffffff__q-85__ha-be5855debdeb4315__hmac-c60ea987722f3d7169cef5a1dd2f4e586e246737/images/items/350/SGSTHCCH.jpg.auto.webp",
     url: "https://www.sweetwater.com/store/detail/SGS17HCCH/sn170099523",
     manufacturer: "Gibson",
     productName: "SG Standard 2017 T - Heritage Cherry",

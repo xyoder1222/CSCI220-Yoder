@@ -8,32 +8,98 @@
         body{
             background-color: black;
             color:  rgb(255,244,114);
+            font-size: 18pt;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        table{
+            background-color: rgb(255,244,114);
+            color: black;
+            padding: 5px;
+            text-align: center;   
+        }
+        td{
+            background-color: black;
+            color: rgb(255,244,114);
+        }
+        th{
+            background-color: black;
+            color: rgb(255,244,114);
+        }
+        img{
+            max-width: 100px;
+            max-height: 100px;
         }
         div{
             background-color: rgb(255,244,114);
             color: black;
-            padding: 5px;
+        }
+        p{
+            font-size: 12pt;
         }
     </style>
 </head>
 <body>
     <script src="items.js"></script>    
-    
+
     <div>
         <h1>MuseX</h1>
         <p>We would have a whole menu section right here where you can navigate through the website, search products, etc. However, this site was made by a college student who has little motivation and has taken only one web programming class.</p>
     </div>
     
-    <br><br>
-
-    <h2>Your <img src="shopping-cart.png" width="20px" height="20px">, Oh Valued Patron:</h2>
-
     <br>
 
-    <div>
-        <p></p>
-    </div>
+    <h2>Your <img src="shopping-cart.png" width="35px" height="35px">, Oh Valued Patron:</h2>
 
+
+    <table id="MyTable">
+        <tr>
+            <th>Item</th>
+            <th>Item Name</th>
+            <th>Description</th>
+            <th>Manufactuer</th>
+            <th>Amount Available</th>
+            <th>Amount in Cart</th>
+            <th>Price</th>
+        </tr>
+    </table>
+
+
+    <script>
+        function populate(){
+            var itemCount = 4;
+            var currentItem = 1;
+            const table = document.getElementById("MyTable");
+
+            //decided to make this function use a loop dynamic variables that way if someone 
+            //were to hypothetically come in and add items to the item.js script, all they have to do is change the itemcount variable
+            while(currentItem <= itemCount)
+            {
+                let row = table.insertRow();
+                let item = row.insertCell(0);
+                item.innerHTML = "<img src= " + window['item' + currentItem].image + "> ";
+                let itemName = row.insertCell(1);
+                itemName.innerHTML = window['item' + currentItem].productName;
+                let description = row.insertCell(2);
+                description.innerHTML = window['item' + currentItem].description;
+                let manufacturer = row.insertCell(3);
+                manufacturer.innerHTML = window['item' + currentItem].manufacturer;
+                let amountAvailable = row.insertCell(4);
+                amountAvailable.innerHTML = window['item' + currentItem].available;
+                let amountInCart = row.insertCell(5);
+                amountInCart.innerHTML = window['item' + currentItem].quantity;
+                let price = row.insertCell(6);
+                price.innerHTML = window['item' + currentItem].price;
+                
+
+                currentItem++;
+            }
+
+            
+        }
+
+        populate();
+</script>
     <!--
         <img src="shopping-cart.png" width="50px" height="50px">
     -->
