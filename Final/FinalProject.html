@@ -51,7 +51,6 @@
 
     <h2>Your <img src="shopping-cart.png" width="35px" height="35px">, Oh Valued Patron:</h2>
 
-
     <table id="MyTable">
         <tr>
             <th>Item</th>
@@ -61,11 +60,22 @@
             <th>Amount Available</th>
             <th>Amount in Cart</th>
             <th>Price</th>
+            <th>Remove From Cart</th>
         </tr>
     </table>
 
+    <div id="Subtotal">
+        <h1>Subtotal: <label id="cost"></label></h1>
+
+    </div>
 
     <script>
+    var item1Cost =0;
+    var item2Cost = 0;
+    var item3Cost = 0;
+    var item4Cost = 0;
+    var subtotal = 0;
+
         function populate(){
             var itemCount = 4;
             var currentItem = 1;
@@ -76,6 +86,7 @@
             while(currentItem <= itemCount)
             {
                 let row = table.insertRow();
+                row.id = "item" + currentItem;
                 let item = row.insertCell(0);
                 item.innerHTML = "<img src= " + window['item' + currentItem].image + "> ";
                 let itemName = row.insertCell(1);
@@ -85,24 +96,113 @@
                 let manufacturer = row.insertCell(3);
                 manufacturer.innerHTML = window['item' + currentItem].manufacturer;
                 let amountAvailable = row.insertCell(4);
+                amountAvailable.id = "amountAvailableForItem" + currentItem;
                 amountAvailable.innerHTML = window['item' + currentItem].available;
                 let amountInCart = row.insertCell(5);
-                amountInCart.innerHTML = window['item' + currentItem].quantity;
+                amountInCart.innerHTML = amountInCart.innerHTML = "<input type='number' id='amountOfItem" + currentItem + "' min='0' max='" + window['item' + currentItem].available + "'>";
                 let price = row.insertCell(6);
                 price.innerHTML = window['item' + currentItem].price;
-                
+                let remove = row.insertCell(7);
+                remove.innerHTML = "<img src ='Remove.png' width='15px' height='15px' id='removeItem" + currentItem + "'>";
 
                 currentItem++;
             }
-
-            
         }
 
         populate();
+
+        document.getElementById("removeItem1").onclick = function()
+        {
+            this.parentElement.parentElement.remove();
+        }
+
+        document.getElementById("removeItem2").onclick = function()
+        {
+            this.parentElement.parentElement.remove();
+        }
+
+        document.getElementById("removeItem3").onclick = function()
+        {
+            this.parentElement.parentElement.remove();
+        }
+
+        document.getElementById("removeItem4").onclick = function()
+        {
+            this.parentElement.parentElement.remove();
+        }
+
+        document.getElementById("amountOfItem1").onclick= function()
+        {
+
+            var price = item1.price;
+
+            var Subtotal;
+
+            var howMany =parseInt(document.getElementById("amountOfItem1").value);
+
+            var priceToAdd = price * howMany;
+
+            item1Cost = priceToAdd;
+
+            updateSubtotal();
+        }
+
+        document.getElementById("amountOfItem2").onclick= function()
+        {
+
+            var price = item2.price;
+
+            var Subtotal;
+
+            var howMany =parseInt(document.getElementById("amountOfItem2").value);
+
+            var priceToAdd = price * howMany;
+
+            item2Cost = priceToAdd;
+
+            updateSubtotal();
+        }
+
+        document.getElementById("amountOfItem3").onclick= function()
+        {
+
+            var price = item3.price;
+
+            var Subtotal;
+
+            var howMany =parseInt(document.getElementById("amountOfItem3").value);
+
+            var priceToAdd = price * howMany;
+
+            item3Cost = priceToAdd;
+
+            updateSubtotal();
+        }
+
+        document.getElementById("amountOfItem4").onclick= function()
+        {
+
+            var price = item4.price;
+
+            var Subtotal;
+
+            var howMany =parseInt(document.getElementById("amountOfItem4").value);
+
+            var priceToAdd = price * howMany;
+
+            item4Cost = priceToAdd;
+
+            updateSubtotal();
+        }
+
+        function updateSubtotal()
+        {
+        subtotal= item1Cost + item2Cost + item3Cost + item4Cost;
+
+        label = document.getElementById("cost");
+
+        label.innerHTML="$" + subtotal.toFixed(2);
+        }
 </script>
-    <!--
-        <img src="shopping-cart.png" width="50px" height="50px">
-    -->
-    
 </body>
 </html>
