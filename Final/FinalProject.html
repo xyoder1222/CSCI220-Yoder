@@ -111,8 +111,13 @@
 
         populate();
 
+        //could not figure out how to remove, add items, or subtract items from the cart dynamically to save my life
+        //therefore, everything is hard coded
+
+        //these are the four remvoe functions that do the same thing but for the different items
         document.getElementById("removeItem1").onclick = function()
         {
+            //gets the parent element of the parent elment (image-->td--->tr) and removes the row
             this.parentElement.parentElement.remove();
         }
 
@@ -131,6 +136,8 @@
             this.parentElement.parentElement.remove();
         }
 
+
+        //these functions get the price of each item of the cart based on how many are in it then updates the subtotal
         document.getElementById("amountOfItem1").onclick= function()
         {
 
@@ -138,9 +145,9 @@
 
             var Subtotal;
 
-            var howMany =parseInt(document.getElementById("amountOfItem1").value);
+            var amount =parseInt(document.getElementById("amountOfItem1").value);
 
-            var priceToAdd = price * howMany;
+            var priceToAdd = price * amount;
 
             item1Cost = priceToAdd;
 
@@ -154,9 +161,9 @@
 
             var Subtotal;
 
-            var howMany =parseInt(document.getElementById("amountOfItem2").value);
+            var amount =parseInt(document.getElementById("amountOfItem2").value);
 
-            var priceToAdd = price * howMany;
+            var priceToAdd = price * amount;
 
             item2Cost = priceToAdd;
 
@@ -170,9 +177,9 @@
 
             var Subtotal;
 
-            var howMany =parseInt(document.getElementById("amountOfItem3").value);
+            var amount =parseInt(document.getElementById("amountOfItem3").value);
 
-            var priceToAdd = price * howMany;
+            var priceToAdd = price * amount;
 
             item3Cost = priceToAdd;
 
@@ -186,15 +193,17 @@
 
             var Subtotal;
 
-            var howMany =parseInt(document.getElementById("amountOfItem4").value);
+            var amount =parseInt(document.getElementById("amountOfItem4").value);
 
-            var priceToAdd = price * howMany;
+            var priceToAdd = price * amount;
 
             item4Cost = priceToAdd;
 
             updateSubtotal();
         }
 
+
+        //updates the subtotal based on the individual prices from the items in the cart
         function updateSubtotal()
         {
         subtotal= item1Cost + item2Cost + item3Cost + item4Cost;
